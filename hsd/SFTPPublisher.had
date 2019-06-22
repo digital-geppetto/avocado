@@ -1,0 +1,7 @@
+{
+    "Homeobox Definition Type":"SFTPPublisher",
+    "Homeobox Name":"SFTPPublisher",
+    "SFTP Server Ip Address":"104.154.239.253",
+    "SFTP Key File Name":"/home/pi/.ssh/dg",
+    "Processing Queue Position":4
+}

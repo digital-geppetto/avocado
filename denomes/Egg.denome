@@ -1,0 +1,3431 @@
+{
+    "Denome": {
+        "Denome Standard Source": "http://digitalgeppetto/arifainchtein/standards",
+        "Mutations": [
+            {
+                "Active": true,
+                "Mutation Event Timestamp in Milliseconds": 1545020375443,
+                "Execution Mode": "Immediate",
+                "Mutation Event Timestamp": "Mon 2018.12.17 15:19:35 +1100",
+                "DeneChains": [
+                    {
+                        "Denes": [],
+                        "Name": "On Load"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Actions To Execute"
+                    },
+                    {
+                        "Denes": [{
+                            "Dene Type": "DeneWord Carrier",
+                            "DeneWords": [],
+                            "Name": "Dene Carrier"
+                        }],
+                        "Name": "DeneWord Injections"
+                    },
+                    {
+                        "Denes": [{
+                            "Dene Type": "DeneWords To Remember",
+                            "Injection Target": "@Egg:Internal:Mnemosycons",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "DeneWord Type": "Remembered DeneWord",
+                                    "Required": true,
+                                    "Value": "@Egg:Purpose:Sensor Data:Power Status:MainBatteryVoltage",
+                                    "Name": "DeneWord To Remember",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "New DeneWord To Remember"
+                        }],
+                        "Name": "Dene Injections"
+                    },
+                    {
+                        "Denes": [
+                            {
+                                "Dene Type": "Update DeneWord Name",
+                                "DeneWords": [{
+                                    "Target": "@Egg:Internal:Mnemosycons:New DeneWord To Remember:DeneWord To Remember",
+                                    "Required": true,
+                                    "Value": "ZZZ",
+                                    "Name": "Update DeneWord Name",
+                                    "Value Type": "int"
+                                }],
+                                "Name": "Update Dene Name"
+                            },
+                            {
+                                "Dene Type": "Update Dene Name",
+                                "Injection Target": "@Egg:Internal:Mnemosycons",
+                                "DeneWords": [{
+                                    "Target": "@Egg:Internal:Mnemosycons:New DeneWord To Remember",
+                                    "Required": true,
+                                    "Value": "Remember Egg-MainBatteryVoltage",
+                                    "Name": "Update Dene Name",
+                                    "Value Type": "String"
+                                }],
+                                "Name": "Update Dene Name"
+                            }
+                        ],
+                        "Name": "On Finish"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    }
+                ],
+                "Mutation Type": "State",
+                "Name": "StartRemembering"
+            },
+            {
+                "Active": true,
+                "Mutation Event Timestamp in Milliseconds": 1533775514879,
+                "Execution Mode": "Immediate",
+                "Mutation Event Timestamp": "Thu 2018.08.09 10:45:14 +1000",
+                "DeneChains": [
+                    {
+                        "Denes": [],
+                        "Name": "On Load"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Actions To Execute"
+                    },
+                    {
+                        "Denes": [{
+                            "Dene Type": "DeneWord Carrier",
+                            "DeneWords": [{
+                                "Required": true,
+                                "Value": "",
+                                "Deletion Target": "@Egg:Internal:Mnemosycons:Remember Tlaloc-Heat Index Data:DeneWord To Remember",
+                                "Name": "DeneWord To Stop Remembering",
+                                "Value Type": "String"
+                            }],
+                            "Name": "DeneWord Carrier"
+                        }],
+                        "Name": "DeneWord Deletion"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Dene Deletion"
+                    },
+                    {
+                        "Denes": [{
+                            "Dene Type": "DeneWord Carrier",
+                            "DeneWords": [],
+                            "Name": "Dene Carrier"
+                        }],
+                        "Name": "DeneWord Injections"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Dene Injections"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "On Finish"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    }
+                ],
+                "Mutation Type": "State",
+                "Name": "StopRemembering"
+            },
+            {
+                "Active": true,
+                "Mutation Event Timestamp in Milliseconds": 1540000602326,
+                "Execution Mode": "Immediate",
+                "Mutation Event Timestamp": "Sat 2018.10.20 12:56:42 +1100",
+                "DeneChains": [
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [{
+                                "Target": "@Egg:Internal:Descriptive:Control Parameters:TubTargetTemperature",
+                                "Required": true,
+                                "Value": 38,
+                                "Name": "Update DeneWord",
+                                "Value Type": "int"
+                            }],
+                            "Name": "Update DeneWord"
+                        }],
+                        "Name": "On Load"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Actions To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    }
+                ],
+                "Mutation Type": "State",
+                "Name": "UpdateControlParameters"
+            },
+            {
+                "Active": true,
+                "Execution Mode": "Immediate",
+                "Mutation Event Timestamp": "",
+                "DeneChains": [
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [{
+                                "Target": "@Egg:Internal:Actuators:Create Daily Partitions:Active",
+                                "Required": true,
+                                "Value": true,
+                                "Name": "Update DeneWord",
+                                "Value Type": "boolean"
+                            }],
+                            "Name": "Update DeneWord"
+                        }],
+                        "Name": "On Load"
+                    },
+                    {
+                        "Denes": [{
+                            "Dene Type": "Action List",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Actuator Pointer",
+                                    "Value": "@Egg:Internal:Actuators:Virtual Actuator",
+                                    "Name": "Virtual Actuator",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Action",
+                                    "Value": "@Egg:Internal:Actuators:Create Daily Partitions",
+                                    "Name": "CreateDailyPartitions",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Create Daily Table Partitions"
+                        }],
+                        "Name": "Actions To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosycons To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Operations"
+                    },
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "Daily",
+                                    "Name": "Execution Time",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 23,
+                                    "Name": "Hour in Day",
+                                    "Value Type": "int"
+                                }
+                            ],
+                            "Name": "Time Mutation Configuration"
+                        }],
+                        "Name": "Mutation Configuration"
+                    }
+                ],
+                "Mutation Type": "State",
+                "Invocation Mode": "Time",
+                "Name": "Create Next Day Partitions Mnemosycons"
+            },
+            {
+                "Active": true,
+                "Execution Mode": "Immediate",
+                "Mutation Event Timestamp": "",
+                "DeneChains": [
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [
+                                {
+                                    "Target": "@Egg:Internal:Mnemosycons:Dynamic Mnemosycon:Active",
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Update Dynamic Mnemosycon Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Target": "@Egg:Internal:Mnemosycons:Static Mnemosycon:Active",
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Update Static Mnemosycon Active",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Update Dynamic Mnemosycon Mnemosycon"
+                        }],
+                        "Name": "On Load"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Actions To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosycons To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Operations"
+                    },
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "Daily",
+                                    "Name": "Execution Time",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 16,
+                                    "Name": "Hour in Day",
+                                    "Value Type": "int"
+                                }
+                            ],
+                            "Name": "Time Mutation Configuration"
+                        }],
+                        "Name": "Mutation Configuration"
+                    }
+                ],
+                "Mutation Type": "State",
+                "Invocation Mode": "Time",
+                "Name": "Activate Mnemosycons"
+            },
+            {
+                "Active": false,
+                "Execution Mode": "Immediate",
+                "DeneChains": [
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [
+                                {
+                                    "Target": "@Egg:Internal:Operons:Operon Control:Sensors Active",
+                                    "Required": true,
+                                    "Value": false,
+                                    "Name": "Update Menmosycons Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Target": "@Egg:Internal:Operons:Operon Control:Actuators Active",
+                                    "Required": true,
+                                    "Value": false,
+                                    "Name": "Update Actuators Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Target": "@Egg:Internal:Operons:Operon Control:Analyticons Active",
+                                    "Required": true,
+                                    "Value": false,
+                                    "Name": "Update Analyticons Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Target": "@Egg:Internal:Operons:Operon Control:Menmosycons Active",
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Update Menmosycons Active",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Update Operons Value"
+                        }],
+                        "Name": "On Load"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Actions To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Operations"
+                    }
+                ],
+                "Mutation Type": "State",
+                "Name": "Enter Mnemosocyte"
+            },
+            {
+                "Active": false,
+                "Execution Mode": "Immediate",
+                "DeneChains": [
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [
+                                {
+                                    "Target": "@Egg:Internal:Operons:Operon Control:Sensors Active",
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Update Menmosycons Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Target": "@Egg:Internal:Operons:Operon Control:Actuators Active",
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Update Actuators Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Target": "@Egg:Internal:Operons:Operon Control:Analyticons Active",
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Update Analyticons Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Target": "@Egg:Internal:Operons:Operon Control:Menmosycons Active",
+                                    "Required": true,
+                                    "Value": false,
+                                    "Name": "Update Menmosycons Active",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Update Operons Value"
+                        }],
+                        "Name": "On Load"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Actions To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Operations"
+                    }
+                ],
+                "Mutation Type": "State",
+                "Name": "Exit Mnemosocyte"
+            },
+            {
+                "Active": true,
+                "Execution Mode": "Immediate",
+                "Mutation Event Timestamp": "Tue 2016.08.23 01:21:24 +1000",
+                "DeneChains": [
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [{
+                                "Target": "@Egg:Internal:Actuators:Set Identity:Actuator Command Code True Expression",
+                                "Required": true,
+                                "Value": "HostMode",
+                                "Name": "Update Actuator Command Code True Expression",
+                                "Value Type": "String"
+                            }],
+                            "Name": "Update Actuator Command Code True Expression"
+                        }],
+                        "Name": "On Load"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Actions To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Operations"
+                    }
+                ],
+                "Mutation Type": "State",
+                "Name": "SetHostMode"
+            },
+            {
+                "Active": true,
+                "Execution Mode": "Immediate",
+                "Mutation Event Timestamp": "Tue 2016.08.23 01:21:24 +1000",
+                "DeneChains": [
+                    {
+                        "Denes": [
+                            {
+                                "Dene Type": "Set DeneWord",
+                                "DeneWords": [{
+                                    "Target": "@Egg:Internal:Actuators:Set Identity:Actuator Command Code True Expression",
+                                    "Required": true,
+                                    "Value": "NetworkMode",
+                                    "Name": "Update Actuator Command Code True Expression",
+                                    "Value Type": "String"
+                                }],
+                                "Name": "Update Actuator Command Code True Expression"
+                            },
+                            {
+                                "Dene Type": "Set DeneWord",
+                                "DeneWords": [{
+                                    "Target": "$FileSystem",
+                                    "Required": true,
+                                    "Value": "TP-LINK_ADA324",
+                                    "Name": "Update SSID",
+                                    "Value Type": "String"
+                                }],
+                                "Name": "Update SSID"
+                            },
+                            {
+                                "Dene Type": "Set DeneWord",
+                                "DeneWords": [{
+                                    "Target": "$FileSystem",
+                                    "Required": true,
+                                    "Value": "",
+                                    "Name": "Update PSK",
+                                    "Value Type": "String"
+                                }],
+                                "Name": "Update PSK"
+                            }
+                        ],
+                        "Name": "On Load"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Actions To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Operations"
+                    }
+                ],
+                "Mutation Type": "State",
+                "Name": "SetNetworkMode"
+            }
+        ],
+        "Version": "Version 1",
+        "Host IP Address": "",
+        "Denome Standard Name": "Sazirac Standard",
+        "Host Name": "Egg",
+        "Nuclei": [
+            {
+                "DeneChains": [
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Current Hour"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Today"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Yesterday"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Current Week"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Current Month"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Current Quarter"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Current Semester"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Current Year"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Pulse Count"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Pathology"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Pulse"
+                    }
+                ],
+                "Name": "Mnemosyne"
+            },
+            {
+                "DeneChains": [
+                    {
+                        "Denes": [{
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": true,
+                                    "Name": "Sensors Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": "true",
+                                    "Value": true,
+                                    "Name": "Actuators Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": "true",
+                                    "Value": false,
+                                    "Name": "Analyticons Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": "true",
+                                    "Value": false,
+                                    "Name": "Mnemosycons Active",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Operon Control"
+                        }],
+                        "Name": "Operons"
+                    },
+                    {
+                        "Denes": [
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "Value": "success",
+                                        "Name": "success",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "warning",
+                                        "Name": "warning",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "danger",
+                                        "Name": "danger",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "crisis",
+                                        "Name": "crisis",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "primary",
+                                        "Name": "primary",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "stale",
+                                        "Name": "stale",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Status"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "Numerical Value": 0,
+                                        "Value": "Not OK",
+                                        "Name": "NotOk",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Numerical Value": 1,
+                                        "Value": "OK",
+                                        "Name": "OK",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "OK-Not OK Set"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "Numerical Value": 0,
+                                        "Value": "OFF",
+                                        "Name": "CompareTo_OFF",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Numerical Value": 1,
+                                        "Value": "ON",
+                                        "Name": "CompareTo_ON",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "On-Off Set"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "Numerical Value": 0,
+                                        "Value": "(0, 0, 255)",
+                                        "Name": "Blue",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Numerical Value": 0,
+                                        "Value": "255, 255, 0)",
+                                        "Name": "Yellow",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Numerical Value": 1,
+                                        "Value": "(0, 255, 0)",
+                                        "Name": "Green",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Numerical Value": 1,
+                                        "Value": "(255, 0, 0)",
+                                        "Name": "Red",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "RGB LED Color Set"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "Required": "true",
+                                    "Value": "Float",
+                                    "Name": "CompareTo_FLOAT",
+                                    "Value Type": "String"
+                                }],
+                                "Name": "Compare to Unit Type"
+                            }
+                        ],
+                        "Name": "Reference"
+                    },
+                    {
+                        "Denes": [
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": false,
+                                        "Value": 2000,
+                                        "Units": "MB",
+                                        "Name": "Minimum Available Disk Space",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": false,
+                                        "Value": 10,
+                                        "Units": "MB",
+                                        "Name": "Minimum Available Memory",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": false,
+                                        "Value": 3600000,
+                                        "Units": "Milliseconds",
+                                        "Name": "Maximum Pulse Generation Duration",
+                                        "Value Type": "int"
+                                    }
+                                ],
+                                "Name": "Operational Parameters Thresholds"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": false,
+                                        "Value": "Vital",
+                                        "Name": "Type",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 60000,
+                                        "Name": "Base Pulse Frequency",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Australia/Melbourne",
+                                        "Name": "Timezone",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Ari Fainchtein",
+                                        "Name": "Created By",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "ari@digitalgeppetto.com",
+                                        "Name": "Contact Info",
+                                        "Value Type": "Email Address"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1.0om",
+                                        "Name": "Version",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 4,
+                                        "Name": "Number of Pulses Before Late",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Minimum": 20,
+                                        "Required": "true",
+                                        "Value": 1000,
+                                        "Name": "Inter Sensor Read Timeout Milliseconds",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Minimum": 20,
+                                        "Required": "true",
+                                        "Value": "success",
+                                        "Name": "Operational Status Bootstrap Equivalent",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Vital"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "Value": 3,
+                                        "Name": "Maximum Number Reboots Before Identity Switch",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Today",
+                                        "Name": "Identity Switch Events Mnemosyne Destination",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Identity Switch Control Parameters"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "Value": 3,
+                                        "Name": "Maximum Number Reboots Before Metamorphosis",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Today",
+                                        "Name": "Metamorphosis Events Mnemosyne Destination",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Metamorphosis Control Parameters"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "Value": "OFF",
+                                        "Name": "CompareTo_OFF",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "ON",
+                                        "Name": "CompareTo_ON",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "Normal",
+                                        "Name": "Operational_Status_Normal",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "WPS",
+                                        "Name": "Operational_Status_WPS",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "Comma",
+                                        "Name": "Operational_Status_Comma",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Constants"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": " 0",
+                                        "Name": "processor\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " ARMv7 Processor rev 4 (v7l)",
+                                        "Name": "model name\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 76.80",
+                                        "Name": "BogoMIPS\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 ",
+                                        "Name": "Features\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0x41",
+                                        "Name": "CPU implementer\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 7",
+                                        "Name": "CPU architecture",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0x0",
+                                        "Name": "CPU variant\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0xd03",
+                                        "Name": "CPU part\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 4",
+                                        "Name": "CPU revision\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 1",
+                                        "Name": "processor\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " ARMv7 Processor rev 4 (v7l)",
+                                        "Name": "model name\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 76.80",
+                                        "Name": "BogoMIPS\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 ",
+                                        "Name": "Features\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0x41",
+                                        "Name": "CPU implementer\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 7",
+                                        "Name": "CPU architecture",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0x0",
+                                        "Name": "CPU variant\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0xd03",
+                                        "Name": "CPU part\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 4",
+                                        "Name": "CPU revision\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 2",
+                                        "Name": "processor\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " ARMv7 Processor rev 4 (v7l)",
+                                        "Name": "model name\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 76.80",
+                                        "Name": "BogoMIPS\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 ",
+                                        "Name": "Features\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0x41",
+                                        "Name": "CPU implementer\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 7",
+                                        "Name": "CPU architecture",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0x0",
+                                        "Name": "CPU variant\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0xd03",
+                                        "Name": "CPU part\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 4",
+                                        "Name": "CPU revision\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 3",
+                                        "Name": "processor\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " ARMv7 Processor rev 4 (v7l)",
+                                        "Name": "model name\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 76.80",
+                                        "Name": "BogoMIPS\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 ",
+                                        "Name": "Features\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0x41",
+                                        "Name": "CPU implementer\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 7",
+                                        "Name": "CPU architecture",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0x0",
+                                        "Name": "CPU variant\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 0xd03",
+                                        "Name": "CPU part\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 4",
+                                        "Name": "CPU revision\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " BCM2709",
+                                        "Name": "Hardware\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " a22082",
+                                        "Name": "Revision\t",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 00000000f68182fe",
+                                        "Name": "Serial\t\t",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Processor Info"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": " ID 0d62:1000 Darfon Electronics Corp. ",
+                                        "Name": "Bus 001 Device 006",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " ID 2a03:0043  ",
+                                        "Name": "Bus 001 Device 005",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " ID 400c:107a  ",
+                                        "Name": "Bus 001 Device 004",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " ID 0424:ec00 Standard Microsystems Corp. SMSC9512/9514 Fast Ethernet Adapter",
+                                        "Name": "Bus 001 Device 003",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " ID 0424:9514 Standard Microsystems Corp. ",
+                                        "Name": "Bus 001 Device 002",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " ID 1d6b:0002 Linux Foundation 2.0 root hub",
+                                        "Name": "Bus 001 Device 001",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "USB Devices"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Linux Egg 4.1.19-v7+ #858 SMP Tue Mar 15 15:56:00 GMT 2016 armv7l GNU/Linux",
+                                        "Name": "uname info",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "\tRaspbian",
+                                        "Name": "Distributor ID",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "\tjessie",
+                                        "Name": "Codename",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Raspberry Pi 3 Model B",
+                                        "Name": "Computer Model",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Computer Info"
+                            }
+                        ],
+                        "Name": "Descriptive"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Control Parameters"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "HomeoBoxes"
+                    },
+                    {
+                        "Denes": [{
+                            "DeneWords": [{
+                                "Required": true,
+                                "Value": true,
+                                "Name": "Generate Status",
+                                "Value Type": "boolean"
+                            }],
+                            "Name": "Status Reporting"
+                        }],
+                        "Name": "Organism Configuration"
+                    },
+                    {
+                        "Denes": [
+                            {
+                                "Dene Type": "Microcontroller",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": 1,
+                                        "Value Type": "int",
+                                        "Name": "Processing Queue Position"
+                                    },
+                                    {
+                                        "DeneWord Type": "Microcontroller Processing Class Name",
+                                        "Required": true,
+                                        "Value": "com.teleonome.framework.microcontroller.SimpleMicroController",
+                                        "Value Type": "String",
+                                        "Name": "Simple Microcontroller Processing Class Name"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "SimpleMicroController",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": false,
+                                        "Value": "http://www.digitalstables.com",
+                                        "Name": "SKU URL",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Simple Micro Controller"
+                            }
+                        ],
+                        "Name": "Components"
+                    },
+                    {
+                        "Denes": [{
+                            "DeneWords": [{
+                                "Required": true,
+                                "Value": "@Egg:Mnemosyne:Mnemosyne Today",
+                                "Name": "Medula Pathology Mnemosyne Location",
+                                "Value Type": "Dene Pointer"
+                            }],
+                            "Name": "Pathology"
+                        }],
+                        "Name": "Medula"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Sensors"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Analyticons"
+                    },
+                    {
+                        "Denes": [
+                            {
+                                "Dene Type": "Mnemosycon",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Mnemosycon Type",
+                                        "Value": "Static",
+                                        "Name": "Mnemosycon Type",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Static Mnemosycon",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Mnemosycon Profile Pointer",
+                                        "Value": "@Egg:Internal:Mnemosycons:Static Mnemosycon Configuration",
+                                        "Name": "Mnemosyne Analysis Profile",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 1,
+                                        "Units": "Dimensionless",
+                                        "Name": "Execution Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    }
+                                ],
+                                "Name": "Static Mnemosycon"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Static Mnemosycon",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosyne Function",
+                                        "Required": true,
+                                        "Value": "forget",
+                                        "Name": "Forget Function",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Pathology Mnemosyne Location",
+                                        "Required": true,
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Today",
+                                        "Name": "Pathology Mnemosyne Location",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rules List Pointer",
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Mnemosycons:Static Mnemosycon Rules List",
+                                        "Name": "Static Mnemosycon Rules List",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Success Tasks Pointer",
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Mnemosycons:Static Mnemosycon Success Tasks",
+                                        "Name": "Static Mnemosycon Success Tasks",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Failure Tasks Pointer",
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Mnemosycons:Static Mnemosycon Failure Tasks",
+                                        "Name": "Static Mnemosycon Failure Tasks",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Success Mnemosyne Operations Pointer",
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Mnemosycons:Static Mnemosycon Success Mnemosyne Operations",
+                                        "Name": "Static Mnemosycon Success Mnemosyne Operations",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Static Mnemosycon Configuration"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "DeneWord Type": "Mnemosyne Operation",
+                                    "Value": "@Egg:Internal:Mnemosycons:Copy Mnemosycon Processing Dene Mnemosyne Operation",
+                                    "Name": "Copy Mnemosycon Processing Dene Mnemosyne Operation",
+                                    "Value Type": "Dene Pointer"
+                                }],
+                                "Name": "Static Mnemosycon Success Mnemosyne Operations"
+                            },
+                            {
+                                "Dene Type": "Mnemosyne Copy Dene Operation",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": 1,
+                                        "Name": "Execution Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Mnemosyne Target",
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Current Week",
+                                        "Name": "Target Current Week",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Dene Copy Dene Source",
+                                        "Value": "@Egg:Purpose:Mnemosycon Processing:Static Mnemosycon Processing",
+                                        "Name": "Dene Source",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Copy Mnemosycon Processing Dene Mnemosyne Operation"
+                            },
+                            {
+                                "DeneType": "Mnemosycon Rules List",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Dynamic Mnemosycon",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rule Pointer",
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Mnemosycons:Publish To DigitalGeppetto Rule",
+                                        "Name": "Publish To DigitalGeppetto",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Static Mnemosycon Rules List"
+                            },
+                            {
+                                "DeneType": "Mnemosycon Rule",
+                                "DeneWords": [
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rule Source",
+                                        "Required": true,
+                                        "Value": "Database",
+                                        "Name": "Source",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rule Location",
+                                        "Required": true,
+                                        "Value": "CommandRequests",
+                                        "Name": "Source",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rule Until Time Unit",
+                                        "Required": true,
+                                        "Value": "Day",
+                                        "Name": "Time Unit",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rule Until Time Value",
+                                        "Required": true,
+                                        "Value": 7,
+                                        "Name": "Time Unit Value",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rule Database Field",
+                                        "Required": true,
+                                        "Value": "Publish To DigitalGeppetto",
+                                        "Name": "Command",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 3,
+                                        "Name": "Execution Position",
+                                        "Value Type": "int"
+                                    }
+                                ],
+                                "Name": "Publish To DigitalGeppetto Rule"
+                            },
+                            {
+                                "Dene Type": "Mnemosycon",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Mnemosycon Type",
+                                        "Value": "Dynamic",
+                                        "Name": "Mnemosycon Type",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Dynamic Mnemosycon",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Mnemosycon Profile Pointer",
+                                        "Value": "@Egg:Internal:Mnemosycons:Dynamic Mnemosycon Configuration",
+                                        "Name": "Mnemosyne Analysis Profile",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 2,
+                                        "Units": "Dimensionless",
+                                        "Name": "Execution Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    }
+                                ],
+                                "Name": "Dynamic Mnemosycon"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Dynamic Mnemosycon",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosyne Function",
+                                        "Required": true,
+                                        "Value": "forget",
+                                        "Name": "Forget Function",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Forget Approach",
+                                        "Required": true,
+                                        "Value": "Percentage Database To Disk",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Pathology Mnemosyne Location",
+                                        "Required": true,
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Today",
+                                        "Name": "Pathology Mnemosyne Location",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Maximum Percentage",
+                                        "Required": true,
+                                        "Value": 50,
+                                        "Name": "Maximum Percentage",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rules List Pointer",
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Mnemosycons:Dynamic Mnemosycon Rules List",
+                                        "Name": "Dynamic Mnemosycon Rules List",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Success Tasks Pointer",
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Mnemosycons:Dynamic Mnemosycon Success Tasks",
+                                        "Name": "Dynamic Mnemosycon Success Tasks",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Failure Tasks Pointer",
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Mnemosycons:Dynamic Mnemosycon Failure Tasks",
+                                        "Name": "Dynamic Mnemosycon Failure Tasks",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Success Mnemosyne Operations Pointer",
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Mnemosycons:Dynamic Mnemosycon Success Mnemosyne Operations",
+                                        "Name": "Dynamic Mnemosycon Success Mnemosyne Operations",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Dynamic Mnemosycon Configuration"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "Target": "@Egg:Internal:Mnemosycons:Static Mnemosycon:Active",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": false,
+                                    "Name": "Update Active",
+                                    "Value Type": "boolean"
+                                }],
+                                "Name": "Static Mnemosycon Success Tasks"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "Target": "@Egg:Internal:Mnemosycons:Static Mnemosycon:Active",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": true,
+                                    "Name": "Update Active",
+                                    "Value Type": "boolean"
+                                }],
+                                "Name": "Static Mnemosycon Failure Tasks"
+                            },
+                            {
+                                "DeneType": "Mnemosycon Rules List",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Dynamic Mnemosycon",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rule Pointer",
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Mnemosycons:Self Rule",
+                                        "Name": "Self Rule",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Dynamic Mnemosycon Rules List"
+                            },
+                            {
+                                "DeneType": "Mnemosycon Rule",
+                                "DeneWords": [
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rule Source",
+                                        "Required": true,
+                                        "Value": "Database",
+                                        "Name": "Source",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rule Location",
+                                        "Required": true,
+                                        "Value": "Pulse",
+                                        "Name": "Location",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rule Until Time Unit",
+                                        "Required": true,
+                                        "Value": "Week",
+                                        "Name": "Time Unit",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosycon Rule Until Time Value",
+                                        "Required": true,
+                                        "Value": 1,
+                                        "Name": "Time Unit",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 4,
+                                        "Name": "Execution Position",
+                                        "Value Type": "int"
+                                    }
+                                ],
+                                "Name": "Self Rule"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "Target": "@Egg:Internal:Mnemosycons:Dynamic Mnemosycon:Active",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": false,
+                                    "Name": "Update Active",
+                                    "Value Type": "boolean"
+                                }],
+                                "Name": "Dynamic Mnemosycon Success Tasks"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "Target": "@Egg:Internal:Mnemosycons:Dynamic Mnemosycon:Active",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": true,
+                                    "Name": "Update Active",
+                                    "Value Type": "boolean"
+                                }],
+                                "Name": "Dynamic Mnemosycon Failure Tasks"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "DeneWord Type": "Mnemosyne Operation",
+                                    "Value": "@Egg:Internal:Mnemosycons:Copy Dynamic Mnemosycon Processing Dene Mnemosyne Operation",
+                                    "Name": "Copy Mnemosycon Processing Dene Mnemosyne Operation",
+                                    "Value Type": "Dene Pointer"
+                                }],
+                                "Name": "Dynamic Mnemosycon Success Mnemosyne Operations"
+                            },
+                            {
+                                "Dene Type": "Mnemosyne Copy Dene Operation",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": 1,
+                                        "Name": "Execution Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Mnemosyne Target",
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Current Week",
+                                        "Name": "Target Current Week",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Dene Copy Dene Source",
+                                        "Value": "@Egg:Purpose:Mnemosycon Processing:Dynamic Mnemosycon Processing",
+                                        "Name": "Dene Source",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Copy Dynamic Mnemosycon Processing Dene Mnemosyne Operation"
+                            }
+                        ],
+                        "Name": "Mnemosycons"
+                    },
+                    {
+                        "Denes": [
+                            {
+                                "Dene Type": "Actuator",
+                                "DeneWords": [
+                                    {
+                                        "DeneWord Type": "Actuator Microcontroller Pointer",
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Components:Simple Micro Controller",
+                                        "Name": "Pointer to Microcontroller",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 1,
+                                        "Units": "Dimensionless",
+                                        "Name": "Execution Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": false,
+                                        "DeneWord Type": "On Start Action List",
+                                        "Value": "@Egg:Internal:Actuators:Virtual Actuator On Start Actions",
+                                        "Name": "Virtual Actuator On Start Actions",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": false,
+                                        "DeneWord Type": "Action List",
+                                        "Value": "@Egg:Internal:Actuators:Virtual Actuator Actions",
+                                        "Name": "Virtual Actuator Actions",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Virtual Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Virtual Actuator"
+                            },
+                            {
+                                "Dene Type": "Action List",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Virtual Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Egg:Internal:Actuators:Shutdown Action",
+                                        "Name": "Shutdown Action",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Virtual Actuator Actions"
+                            },
+                            {
+                                "Dene Type": "Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Virtual Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 1,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "$Shutdown",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1==1",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Shutdown Action"
+                            },
+                            {
+                                "Dene Type": "Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "VirtualActuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 5,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "$CreateDailyPartitions",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1==1",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Action Success Tasks",
+                                        "Value": "@Egg:Internal:Actuators:Create Daily Partitions Action Success Tasks",
+                                        "Name": "Action Success Tasks True Expression",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Create Daily Partitions"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Target": "@Egg:Internal:Actuators:Create Daily Partitions:Active",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": false,
+                                        "Name": "Set Active",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Create Daily Partitions Action Success Tasks"
+                            },
+                            {
+                                "Dene Type": "Action List",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Virtual Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Egg:Internal:Actuators:Set IP Address",
+                                        "Name": "Set IP Address",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Egg:Internal:Actuators:Set Identity",
+                                        "Name": "Set Identity",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Egg:Internal:Actuators:Set SSID",
+                                        "Name": "Set SSID",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Virtual Actuator On Start Actions"
+                            },
+                            {
+                                "Dene Type": "On Start Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Virtual Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 1,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "NetworkMode",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1==1",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Set Identity"
+                            },
+                            {
+                                "Dene Type": "On Start Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Virtual Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 2,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "$IPForLCD",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1==1",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Set IP Address"
+                            },
+                            {
+                                "Dene Type": "On Start Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Virtual Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 3,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "$SSIDLCD",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1==1",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Set SSID"
+                            }
+                        ],
+                        "Name": "Actuators"
+                    }
+                ],
+                "Name": "Internal"
+            },
+            {
+                "DeneChains": [
+                    {
+                        "Denes": [
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Organism",
+                                        "Name": "Initial Identity Mode",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 0,
+                                        "Name": "Current Number Reboots Before Metamorphosis",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Organism",
+                                        "Name": "Current Identity Mode",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 60000,
+                                        "Name": "Current Pulse Frequency",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 27645,
+                                        "Name": "Current Pulse Generation Duration",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " OK 17:53",
+                                        "Name": "Status",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Pulse: 27",
+                                        "Name": "Alert Message",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "WPS",
+                                        "Name": "OperationalMode",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 0,
+                                        "Name": "Operational Status Red Value",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 255,
+                                        "Name": "Operational Status Green Value",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 0,
+                                        "Name": "Operational Status Blue Value",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 0,
+                                        "Name": "Operational Status Blink Value",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 1,
+                                        "Name": "Number of Alert Messages",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "success",
+                                        "Name": "Operational Status Bootstrap Equivalent",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Vital"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "top - 17:53:03 ",
+                                        "Name": "Time",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " 4 min",
+                                        "Name": "Up Time",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0.41",
+                                        "Name": "Load Average 1 Minute",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0.23",
+                                        "Name": "Load Average 5 Minute",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0.1",
+                                        "Name": "Load Average 15 Minute",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "4.7",
+                                        "Units": "%",
+                                        "Name": "CPU Usage As Percent By User",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1.8",
+                                        "Units": "%",
+                                        "Name": "CPU Usage As Percent By System",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0.0",
+                                        "Units": "%",
+                                        "Name": "CPU Usage As Percent By Low Priority Services",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "90.5",
+                                        "Units": "%",
+                                        "Name": "CPU Usage As Percent By Idle Process",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "2.9",
+                                        "Units": "%",
+                                        "Name": "CPU Usage As Percent By IOWait",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0.0",
+                                        "Units": "%",
+                                        "Name": "CPU Usage As Percent By Hardware Interrupt",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0.1",
+                                        "Units": "%",
+                                        "Name": "Cpu Usage As Percent By Software Interrupts",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0.0",
+                                        "Units": "%",
+                                        "Name": "CPU Usage As Percent By Steal Time",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "948012.0",
+                                        "Units": "Kb",
+                                        "Name": "Total System Memory",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "346152.0",
+                                        "Units": "Kb",
+                                        "Name": "Free System Memory",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "601860.0",
+                                        "Units": "Kb",
+                                        "Name": "Memory Used",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "10256.0",
+                                        "Units": "Kb",
+                                        "Name": "Buffer Cache",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "102396.0",
+                                        "Units": "Kb",
+                                        "Name": "Total Swap Available",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0.0",
+                                        "Units": "Kb",
+                                        "Name": "Total Swap Used",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "102396.0",
+                                        "Units": "Kb",
+                                        "Name": "Total Swap Free",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "159736.0",
+                                        "Units": "Kb",
+                                        "Name": "Cached Memory",
+                                        "Value Type": "double"
+                                    }
+                                ],
+                                "Name": "Memory Status"
+                            },
+                            {
+                                "Dene Type": "Process Memory Info",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "root",
+                                        "Name": "User",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "20",
+                                        "Name": "Priority",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0",
+                                        "Name": "Nice Level",
+                                        "Value Type": ""
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "139716",
+                                        "Units": "Kb",
+                                        "Name": "Virtual Memory Used By Process",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "48388",
+                                        "Units": "Kb",
+                                        "Name": "Resident Memory Used By Process",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "10432",
+                                        "Units": "Kb",
+                                        "Name": "Shareable Memory",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "S",
+                                        "Units": "Kb",
+                                        "Name": "Current Status",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "6.6",
+                                        "Units": "Kb",
+                                        "Name": "CPU Used By Process As Percentage",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0:05.84",
+                                        "Units": "Kb",
+                                        "Name": "Time Process Has Been Running",
+                                        "Value Type": "double"
+                                    }
+                                ],
+                                "Name": "Hypothalamus"
+                            },
+                            {
+                                "Dene Type": "Process Memory Info",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "root",
+                                        "Name": "User",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "20",
+                                        "Name": "Priority",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0",
+                                        "Name": "Nice Level",
+                                        "Value Type": ""
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "139080",
+                                        "Units": "Kb",
+                                        "Name": "Virtual Memory Used By Process",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "70436",
+                                        "Units": "Kb",
+                                        "Name": "Resident Memory Used By Process",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "10376",
+                                        "Units": "Kb",
+                                        "Name": "Shareable Memory",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "S",
+                                        "Units": "Kb",
+                                        "Name": "Current Status",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0.0",
+                                        "Units": "Kb",
+                                        "Name": "CPU Used By Process As Percentage",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0:13.18",
+                                        "Units": "Kb",
+                                        "Name": "Time Process Has Been Running",
+                                        "Value Type": "double"
+                                    }
+                                ],
+                                "Name": "Web Server"
+                            },
+                            {
+                                "Dene Type": "Process Memory Info",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "root",
+                                        "Name": "User",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "20",
+                                        "Name": "Priority",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0",
+                                        "Name": "Nice Level",
+                                        "Value Type": ""
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "131872",
+                                        "Units": "Kb",
+                                        "Name": "Virtual Memory Used By Process",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "38208",
+                                        "Units": "Kb",
+                                        "Name": "Resident Memory Used By Process",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "11304",
+                                        "Units": "Kb",
+                                        "Name": "Shareable Memory",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "S",
+                                        "Units": "Kb",
+                                        "Name": "Current Status",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0.0",
+                                        "Units": "Kb",
+                                        "Name": "CPU Used By Process As Percentage",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0:12.28",
+                                        "Units": "Kb",
+                                        "Name": "Time Process Has Been Running",
+                                        "Value Type": "double"
+                                    }
+                                ],
+                                "Name": "Heart"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "7492",
+                                        "Units": "MB",
+                                        "Name": "Total Space",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "4311",
+                                        "Units": "MB",
+                                        "Name": "Free Space",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "3983",
+                                        "Units": "MB",
+                                        "Name": "Usable Space",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "13.0",
+                                        "Units": "MB",
+                                        "Name": "Available Memory",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "49.0",
+                                        "Units": "MB",
+                                        "Name": "Maximum Memory",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1365.0",
+                                        "Units": "MB",
+                                        "Name": "Database Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "27/01/2018 15:21",
+                                        "Name": "PaceMaker Build Number",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "17",
+                                        "Name": "Medula Build Number",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "System Data"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "10.0.0.121",
+                                        "Name": "Host IP Address",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "wlan0",
+                                        "Name": "Interface",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " IEEE 802.11bgn",
+                                        "Name": "Support",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "\"TP-LINK_ADA324\"",
+                                        "Name": "ESSID",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Managed",
+                                        "Name": "Mode",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "2.457 GHz",
+                                        "Name": "Frequency",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " E8",
+                                        "Name": "Access Point",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "72 Mb/s",
+                                        "Name": "Bit Rate",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1496 dBm",
+                                        "Name": "Tx-Power",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "7",
+                                        "Name": "Retry short limit",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "off",
+                                        "Name": "RTS thr",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "off",
+                                        "Name": "Fragment thr",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "off",
+                                        "Name": "Encryption key",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "on",
+                                        "Name": "Power Management",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "70/70",
+                                        "Name": "Link Quality",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "-37 dBm",
+                                        "Name": "Signal level",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0",
+                                        "Name": "Rx invalid nwid",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0",
+                                        "Name": "Rx invalid crypt",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0",
+                                        "Name": "Rx invalid frag",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0",
+                                        "Name": "Tx excessive retries",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0",
+                                        "Name": "Invalid misc",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "0",
+                                        "Name": "Missed beacon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " -34.00 dBm",
+                                        "Name": "SSID:TP-LINK_ADA324",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " -86.00 dBm",
+                                        "Name": "SSID:edible forest shed antenna",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": " -88.00 dBm",
+                                        "Name": "SSID:Main House Antenna",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Wifi Info"
+                            }
+                        ],
+                        "Name": "Operational Data"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "External Data"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Analysis"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Sensor Data"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Actuator Logic Processing"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosycon Processing"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Pathology"
+                    }
+                ],
+                "Name": "Purpose"
+            },
+            {
+                "DeneChains": [
+                    {
+                        "DeneChain Type": "Human Interface Control Parameters",
+                        "Denes": [
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Title",
+                                        "Value": "Home",
+                                        "Name": "Page Title",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Position",
+                                        "Value": 1,
+                                        "Name": "Page Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Include in Navigation",
+                                        "Value": true,
+                                        "Name": "Include in Navigation",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Lower Nav Glyphicon",
+                                        "Value": "glyphicon glyphicon-home",
+                                        "Name": "Lower Nav Glyphicon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Web Page View Definition Pointer",
+                                        "Value": "@Egg:Human Interface:Home Page",
+                                        "Name": "DeneChainPointer",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Home Page"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Title",
+                                        "Value": "History",
+                                        "Name": "Page Title",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Include in Navigation",
+                                        "Value": true,
+                                        "Name": "Include in Navigation",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Lower Nav Glyphicon",
+                                        "Value": "glyphicon glyphicon-header",
+                                        "Name": "Lower Nav Glyphicon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Position",
+                                        "Value": 2,
+                                        "Name": "Page Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Web Page View Definition Pointer",
+                                        "Value": "@Egg:Human Interface:Status Page",
+                                        "Name": "DeneChainPointer",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "History"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Title",
+                                        "Value": "Search",
+                                        "Name": "Page Title",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Include in Navigation",
+                                        "Value": true,
+                                        "Name": "Include in Navigation",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Position",
+                                        "Value": 3,
+                                        "Name": "Page Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Lower Nav Glyphicon",
+                                        "Value": "glyphicon glyphicon-search",
+                                        "Name": "Lower Nav Glyphicon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Web Page View Definition Pointer",
+                                        "Value": "@Egg:Human Interface:Search Page",
+                                        "Name": "DeneChainPointer",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Search"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Title",
+                                        "Value": "Settings",
+                                        "Name": "Page Title",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Include in Navigation",
+                                        "Value": true,
+                                        "Name": "Include in Navigation",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Position",
+                                        "Value": 4,
+                                        "Name": "Page Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Lower Nav Glyphicon",
+                                        "Value": "glyphicon glyphicon-cog",
+                                        "Name": "Lower Nav Glyphicon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Web Page View Definition Pointer",
+                                        "Value": "@Egg:Human Interface:Settings Page",
+                                        "Name": "DeneChainPointer",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Settings"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Title",
+                                        "Value": "Diagnostics",
+                                        "Name": "Page Title",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Include in Navigation",
+                                        "Value": true,
+                                        "Name": "Include in Navigation",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Lower Nav Glyphicon",
+                                        "Value": "glyphicon glyphicon-plus",
+                                        "Name": "Lower Nav Glyphicon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Position",
+                                        "Value": 5,
+                                        "Name": "Page Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Web Page View Definition Pointer",
+                                        "Value": "@Egg:Human Interface:Diagnostics Page",
+                                        "Name": "DeneChainPointer",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Diagnositcs"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Title",
+                                        "Value": "Pathology",
+                                        "Name": "Page Title",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Include in Navigation",
+                                        "Value": true,
+                                        "Name": "Include in Navigation",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Lower Nav Glyphicon",
+                                        "Value": "glyphicon glyphicon-plus",
+                                        "Name": "Lower Nav Glyphicon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Page Position",
+                                        "Value": 6,
+                                        "Name": "Page Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Web Page View Definition Pointer",
+                                        "Value": "@Egg:Human Interface:Pathology Page",
+                                        "Name": "DeneChainPointer",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Pathology"
+                            }
+                        ],
+                        "Name": "Human Interface Control Parameters"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Home Page"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [{
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Egg:Human Interface:Search Detail",
+                                    "Name": "Search Panel Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "Search Panel",
+                                    "Name": "Search Panel Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 1,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Search Panel"
+                        }],
+                        "Name": "Search Page"
+                    },
+                    {
+                        "Denes": [{
+                            "DeneWords": [],
+                            "Name": "Search Detail"
+                        }],
+                        "Name": "Search Detail"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "DeneWord Type": "Panel DeneChain Pointer",
+                                        "Value": "@Egg:Human Interface:Settings Info",
+                                        "Name": "Settings Info Form Pointer",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "DeneWord Type": "Panel Visualization Style",
+                                        "Value": "Settings Info",
+                                        "Name": "Settings Info Style",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Panel In Page Position",
+                                        "Value": 1,
+                                        "Name": "Panel In Page Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Visible",
+                                        "Value Type": "boolean"
+                                    }
+                                ],
+                                "Name": "Settings Info Panel"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "DeneWord Type": "Panel DeneChain Pointer",
+                                        "Value": "@Egg:Human Interface:Update Parameters",
+                                        "Name": "Update Parameters Form Pointer",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "DeneWord Type": "Panel Visualization Style",
+                                        "Value": "Update Multiple Denewords Form Panel",
+                                        "Name": "Update Fields Panel Style",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Panel In Page Position",
+                                        "Value": 2,
+                                        "Name": "Panel In Page Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Visible",
+                                        "Value Type": "boolean"
+                                    }
+                                ],
+                                "Name": "Update Parameters Panel"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "DeneWord Type": "Panel DeneChain Pointer",
+                                        "Value": "@Egg:Human Interface:Configure Wifi",
+                                        "Name": "Update Parameters Form Pointer",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "DeneWord Type": "Panel Visualization Style",
+                                        "Value": "Update Multiple Denewords Form Panel",
+                                        "Name": "Update Fields Panel Style",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Panel In Page Position",
+                                        "Value": 3,
+                                        "Name": "Panel In Page Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Visible",
+                                        "Value Type": "boolean"
+                                    }
+                                ],
+                                "Name": "Configure Wifi Panel"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "DeneWord Type": "Panel DeneChain Pointer",
+                                        "Value": "@Egg:Human Interface:Device Info",
+                                        "Name": "Update Parameters Form Pointer",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "DeneWord Type": "Panel Visualization Style",
+                                        "Value": "Dene To Table",
+                                        "Name": "Update Fields Panel Style",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Panel In Page Position",
+                                        "Value": 4,
+                                        "Name": "Panel In Page Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Visible",
+                                        "Value Type": "boolean"
+                                    }
+                                ],
+                                "Name": "Device Info Panel"
+                            }
+                        ],
+                        "Name": "Settings Page"
+                    },
+                    {
+                        "Denes": [{
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:Device Info",
+                                    "Name": "Pointer To Device Info Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:Update Parameters",
+                                    "Name": "Pointer To Update Params",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:Configure Wifi",
+                                    "Name": "Pointer To Wifi Panel",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Settings Info"
+                        }],
+                        "Name": "Settings Info"
+                    },
+                    {
+                        "Denes": [{
+                            "DeneWords": [],
+                            "Name": "Configure Wifi"
+                        }],
+                        "Name": "Configure Wifi"
+                    },
+                    {
+                        "Denes": [
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "NavBar Position",
+                                        "Value": 1,
+                                        "Name": "NavBar Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "NavBar Pointer",
+                                        "Value": "@Mnemocyte:Human Interface:Update System Parameters",
+                                        "Name": "Update System Parameters",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "NavBar Text",
+                                        "Value": "System",
+                                        "Name": "NavBar Text",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Update System Parameters"
+                            }
+                        ],
+                        "Name": "Update Parameters"
+                    },
+                    {
+                        "Denes": [{
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Data Source Pointer",
+                                    "Value": "@Egg:Purpose:Operational Data:Vital:Current Pulse Frequency",
+                                    "Name": "Current Pulse Frequency",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Panel Position",
+                                    "Value": 1,
+                                    "Name": "Panel In Panel Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Restart Needed",
+                                    "Value": false,
+                                    "Name": "Restart Needed",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel Display Name",
+                                    "Value": "Pulse Frequency",
+                                    "Name": "Display Name",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Update Pulse Frequency"
+                        }],
+                        "Name": "Update System Parameters"
+                    },
+                    {
+                        "Denes": [
+                            {
+                                "DeneWords": [{
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Data Source Pointer",
+                                    "Value": "@Egg:Internal:Descriptive:Computer Info",
+                                    "Name": "Location Computer Info",
+                                    "Value Type": "Dene Pointer"
+                                }],
+                                "Name": "Dene Data Source"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Data Source Pointer",
+                                    "Value": "@Egg:Internal:Descriptive:USB Devices",
+                                    "Name": "Location String USB Devices",
+                                    "Value Type": "Dene Pointer"
+                                }],
+                                "Name": "Dene Data Source USB Devices"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Data Source Pointer",
+                                    "Value": "@Egg:Internal:Descriptive:Processor Info",
+                                    "Name": "Location String Processor Info",
+                                    "Value Type": "Dene Pointer"
+                                }],
+                                "Name": "Dene Data Source"
+                            }
+                        ],
+                        "Name": "Device Info"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "DeneWord Type": "Panel DeneChain Pointer",
+                                        "Value": "@Egg:Human Interface:Diagnostics Info",
+                                        "Name": "Diagnostics Info Form Pointer",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "DeneWord Type": "Panel Visualization Style",
+                                        "Value": "Diagnostics Info",
+                                        "Name": "Diagnostics Info Style",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Panel In Page Position",
+                                        "Value": 1,
+                                        "Name": "Panel In Page Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Visible",
+                                        "Value Type": "boolean"
+                                    }
+                                ],
+                                "Name": "Diagnostics Info Panel"
+                            }
+                        ],
+                        "Name": "Diagnostics Page"
+                    },
+                    {
+                        "Denes": [{
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:Denome Analysis Panel",
+                                    "Name": "Pointer To Denome Analysis Info Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:Synchronous Cycle Panel",
+                                    "Name": "Pointer To Device Info Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:Asynchronous Cycle Panel",
+                                    "Name": "Pointer To Asynchronous Cycle Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:System Diagnostics Panel",
+                                    "Name": "Pointer To System Diagnostics Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:Mnemosycons Panel",
+                                    "Name": "Pointer To System Mnemosycons Panel",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Diagnostics Info"
+                        }],
+                        "Name": "Diagnostics Info"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Denome Analysis Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Synchronous Cycle Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Mnemosycons Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Asynchronous Cycle Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "System Diagnostics Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [{
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Egg:Human Interface:Pathology Detail",
+                                    "Name": "Pathology Panel Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "Pathology Panel",
+                                    "Name": "Pathology Panel Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 1,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Pathology Panel"
+                        }],
+                        "Name": "Pathology Page"
+                    },
+                    {
+                        "Denes": [{
+                            "Type": "Reporting",
+                            "DeneWords": [],
+                            "Name": "Pathology Detail"
+                        }],
+                        "Name": "Pathology Detail"
+                    }
+                ],
+                "Name": "Human Interface"
+            }
+        ],
+        "Name": "Egg"
+    },
+    "Pulse Timestamp": "28/01/18 17:53",
+    "Pulse Timestamp in Milliseconds": 1517122383449,
+    "Mnemosyne Time Prunning Analysis Duration Millis": 291,
+    "Pulse Creation Duration Millis": 27645
+}

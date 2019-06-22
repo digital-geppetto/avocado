@@ -1,0 +1,19 @@
+{
+    "Homeobox Definition Type":"MicroController",
+    "Homeobox Name":"Network Inspector MicroController",
+    "Component Name":"Network Inspector MicroController",
+    "Class": "com.teleonome.framework.microcontroller.networkinspectormicrocontroller.NetworkInspectorMicroController",                             
+    "Is Mother":false,
+    "Software":{
+        "Processing Queue Position":3,
+        "Parameters":[
+            {
+                "ArpScanRetryCount":8,
+                "Sample Frequency":1
+            }
+        ]
+    },
+    "Hardware":{}
+}
+
+                                        

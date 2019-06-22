@@ -1,0 +1,47 @@
+{
+    "Homeobox Name":"Home Page Panels",
+    "Homeobox Definition Type":"UserInterfaceDefinition",
+    "Container Page Identity":"@Egg:Human Interface:Home Page",
+    "Panels":[
+        {
+            "Name":"Organism View",
+            "Panel In Page Position":1,
+            "Panel Visualization Style": "Organism View Panel",
+            "Processor":"OrganismViewGenerator",
+            "Visible":true
+        },
+        {
+            "Name":"Now",
+            "Panel In Page Position":2,
+            "Panel Visualization Style": "Single Value Panel Complete Width",
+            "Processor":"SingleValuePanelCompleteWidthGenerator",
+            "Values":[
+                {
+                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:Ra:BatteryVoltage",
+                    "Panel In Panel Position":1,
+                    "Panel Display Name":"Ra Battery",
+                    "Visible":true
+                },
+                {
+                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:Sento:TubTemperature",
+                    "Panel In Panel Position":2,
+                    "Panel Display Name":"Tub Temp",
+                    "Visible":true
+                },
+                {
+                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:Sento:PumpStatus",
+                    "Panel In Panel Position":3,
+                    "Panel Display Name":"Sento Pump",
+                    "Visible":true
+                },
+                {
+                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:MonoNanny:PumpStatus",
+                    "Panel In Panel Position":4,
+                    "Panel Display Name":"MonoNanny",
+                    "Visible":true
+                }
+            ]
+        }      
+    ]
+
+}
