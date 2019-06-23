@@ -1,0 +1,19 @@
+{
+    "Description":"This Sertoli file will generate a Teleonomen with a Network Sensor",
+     "Containers":[],
+    "HomeBoxDefinitions":{
+        "Components":[
+            "ArduinoMother.mcu",
+            "NetworkInspectorMicroController.mcu"
+        ],
+        "Sensors":[
+            "NetworkSensor.hsd"
+        ],
+       "Actuators":[
+        ],
+       "Human Interface":[
+           
+       ],
+       "Files":[]    
+    }
+}

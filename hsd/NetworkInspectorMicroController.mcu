@@ -8,8 +8,18 @@
         "Processing Queue Position":3,
         "Parameters":[
             {
-                "ArpScanRetryCount":8,
-                "Sample Frequency":1
+               "Name": "ArpScanRetryCount",
+               "Value":8.0,
+               "Value Type":"double",
+               "Minimum":1,
+               "Maximum":20
+            },
+            {
+                "name":"Sample Frequency",
+                "Value":1.0,
+                "Value Type":"double",
+                "Minimum":1,
+                "Maximum":100
             }
         ]
     },
