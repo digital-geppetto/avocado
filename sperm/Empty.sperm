@@ -1,0 +1,17 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Teleonome Name":"",
+			"Purpose Type": "Mutate",
+			"Description":""
+		},
+		"Hypothalamus": {
+			"Actions":[],
+			"Homeoboxes": [],
+            "Mutations":[]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}
