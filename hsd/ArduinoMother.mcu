@@ -1,0 +1,22 @@
+{
+    "Homeobox Definition Type":"MicroController",
+    "Homeobox Name":"Main Arduino",
+    "Component Name":"Main Arduino",
+    "Class": "com.teleonome.framework.microcontroller.gnuserialport.GNUArduinoUno",                     
+    "Is Mother":true,
+    "Software":{
+        "Processing Queue Position":2,
+        "Parameters":[
+            {
+               "Name": "Serial Data Rate",
+               "Value":9600,
+               "Value Type":"double",
+               "Minimum":1200,
+               "Maximum":115200
+            }
+        ]
+    },
+    "Hardware":{}
+}
+
+                                        

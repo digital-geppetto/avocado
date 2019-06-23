@@ -1,0 +1,33 @@
+{
+    "Homeobox Definition Type":"MicroController",
+    "Homeobox Name":"CSV Publisher MicroController",
+    "Component Name":"CSV Publisher MicroController",
+    "Class": "com.teleonome.framework.microcontroller.csvpublishermicrocontroller.CSVPublisherMicroController",                     
+    "Is Mother":false,
+    "Software":{
+        "Processing Queue Position":5,
+        "Parameters":[
+            {
+               "Name": "Export Upload Speed",
+               "Value": "@Egg:Purpose:Sensor Data:Network Status:UploadSpeed",
+               "Value Type":"Dene Pointer",
+               "Required":true
+            },
+            {
+                "Name": "Export File Name",
+                "Value": "@Egg:Purpose:Sensor Data:Network Status:DownloadSpeed",
+                "Value Type":"Dene Pointer",
+                "Required":true
+             },
+             {
+                 "Name": "Export Operation",
+                 "Value": "Export Append",
+                 "Value Type":"Dene Pointer",
+                 "Required":true
+              }
+        ]
+    },
+    "Hardware":{}
+}
+
+                                        
