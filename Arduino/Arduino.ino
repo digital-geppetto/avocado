@@ -531,7 +531,7 @@ void loop() {
   Serial.println("Ok-Get Time");
    Serial.flush();
   }else if(command.startsWith("SetTime")){
-    //SetTime#2019#6#24#13#50#45
+    //SetTime#2019#6#24#13#59#45
     int year = getValue(command, '#', 1).toInt();
     int month = getValue(command, '#', 2).toInt(); // January=1
     int day = getValue(command, '#', 3).toInt();
@@ -707,7 +707,7 @@ void loop() {
    
   }else if(command=="Ping"){
   
-    Serial.println("ok-Ping");
+    Serial.println("Ok-Ping");
     Serial.flush();
   }else if (command.startsWith("AsyncData") ){
     if(faultData == ""){
