@@ -194,11 +194,11 @@ long dateAsSeconds(int year, int month, int date, int hour, int minute, int seco
 
 
 long generateCode(){
-  rtc.read();
-  int seconds = rtc.second+SECONDOFFSET;  
-  int month = rtc.month-1;
- 
-  long timestamp = dateAsSeconds(rtc.year, month, rtc.day, rtc.hour, rtc.minute, seconds);
+
+   int seconds = rtc.getSeconds()+SECONDOFFSET;  
+  int month = rtc.getMonth()-1;
+  long timestamp = dateAsSeconds(rtc.getYear(), month, rtc.getDay(), rtc.getHours(), rtc.getMinutes(), seconds);
+  
   char secretCode[SHARED_SECRET_LENGTH];
   readSecret(secretCode);
   TOTP totp = TOTP(secretCode);
@@ -233,11 +233,10 @@ long generateCode(){
 }
 
 long generateDigitalGeppettoCode(){
-  rtc.read();
+  
   int seconds = rtc.getSeconds()+SECONDOFFSET;  
-  int month = rtc.getMontH()-1;
- 
-  long timestamp = dateAsSeconds(rtc.getYear(), month, rtc.getDay(), rtc.getHour(), rtc.getMinute(), seconds);
+  int month = rtc.getMonth()-1;
+  long timestamp = dateAsSeconds(rtc.getYear(), month, rtc.getDay(), rtc.getHours(), rtc.getMinutes(), seconds);
   char dgSecretCode[DIGITAL_GEPPETTO_SECRET_LENGTH];
   readDigitalGeppettoSecret(dgSecretCode);
   TOTP totp = TOTP(dgSecretCode);
@@ -267,7 +266,7 @@ boolean checkCode(long userCode){
   return codeOk;
 }
 void testRTCMode(){
-  rtc.read();
+  
 //*************************Time********************************
   Serial.print("   Year = ");//year
   Serial.print(rtc.getYear());
@@ -287,7 +286,7 @@ void testRTCMode(){
 //
 int month = rtc.month-1;
 
-  long timestamp = dateAsSeconds(rtc.getYear(), month, rtc.getDay(), rtc.getHour(), rtc.getMinute(), seconds);
+  long timestamp = dateAsSeconds(rtc.getYear(), month, rtc.getDay(), rtc.getHours(), rtc.getMinutes(), seconds);
   Serial.print("date as seconds=");
   Serial.print(timestamp);
   long code = generateCode();
@@ -386,9 +385,9 @@ void setup() {
 void loop() {
 
 
- int seconds = rtc.getSecond()+SECONDOFFSET;
+ int seconds = rtc.getSeconds()+SECONDOFFSET;
  int month = rtc.getMonth()-1;
-  long now = dateAsSeconds(rtc.getYear(), month, rtc.getDay(), rtc.getHour(), rtc.getMinute(), seconds);
+  long now = dateAsSeconds(rtc.getYear(), month, rtc.getDay(), rtc.getHours(), rtc.getMinutes(), seconds);
   if( (now - commandCodeHistoryLastRefreshSeconds)>COMMAND_CODE_HISTORY_REFRESH_SECONDS){
       commandCodeHistoryLastRefreshSeconds=now;
       long currentCode = generateCode();
