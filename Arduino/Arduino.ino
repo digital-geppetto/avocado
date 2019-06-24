@@ -514,16 +514,30 @@ void loop() {
      leds.show();
     Serial.flush(); 
   //  lcd.clear();
+  }else if(command.startsWith("GetTime"){
+    String displayTime =  "";
+  Serial.print(rtc.getDay());
+  Serial.print("/");
+  Serial.print(rtc.getMonth());
+  Serial.print("/");
+  int year = rtc.getYear()-2000;
+  Serial.print(year);
+  Serial.print(" ");
+  Serial.print(rtc.getHours());
+  Serial.print(":");
+  Serial.print(rtc.getMinutes());
+  Serial.print(":");
+  Serial.println(rtc.getSeconds());
+  Serial.println("Ok-Get Time");
+   Serial.flush();
   }else if(command.startsWith("SetTime")){
     //SetTime#2019#6#24#13#50#45
     int year = getValue(command, '#', 1).toInt();
     int month = getValue(command, '#', 2).toInt(); // January=1
     int day = getValue(command, '#', 3).toInt();
-    int dayOfWeek = getValue(command, '#', 4).toInt(); // days values come from 0 to 6: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-    
-    int hour = getValue(command, '#', 5).toInt();
-    int minute = getValue(command, '#', 6).toInt();
-    int second = getValue(command, '#', 7).toInt();
+    int hour = getValue(command, '#', 4).toInt();
+    int minute = getValue(command, '#', 5).toInt();
+    int second = getValue(command, '#', 6).toInt();
     
     rtc.stopRTC(); //stop the RTC
     rtc.setTime(hour,minute,second); //set the time here
