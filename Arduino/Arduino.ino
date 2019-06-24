@@ -205,7 +205,7 @@ long generateCode(){
  // TOTP totp = TOTP("JV4UYZLHN5CG633S");
  
  long code=totp. gen_code  (timestamp ) ;
- //long code=totp. gen_code  (rtc.year, rtc.month, rtc.day, rtc.hour, rtc.minute, rtc.second, timeZoneHours*60);
+ //long code=totp. gen_code  (rtc.year, month, rtc.day, rtc.hour, rtc.minute, rtc.second, timeZoneHours*60);
  //long code=totp. gen_code  (
  // now check to see if this code is already in the history
  boolean found=false;
@@ -284,7 +284,7 @@ void testRTCMode(){
   
 
 //
-int month = rtc.month-1;
+int month = rtc.getMonth()-1;
 
   long timestamp = dateAsSeconds(rtc.getYear(), month, rtc.getDay(), rtc.getHours(), rtc.getMinutes(), seconds);
   Serial.print("date as seconds=");
