@@ -234,14 +234,13 @@ long generateCode(){
 
 long generateDigitalGeppettoCode(){
   rtc.read();
-  int seconds = rtc.second+SECONDOFFSET;  
-  int month = rtc.month-1;
+  int seconds = rtc.getSeconds()+SECONDOFFSET;  
+  int month = rtc.getMontH()-1;
  
-  long timestamp = dateAsSeconds(rtc.year, month, rtc.day, rtc.hour, rtc.minute, seconds);
+  long timestamp = dateAsSeconds(rtc.getYear(), month, rtc.getDay(), rtc.getHour(), rtc.getMinute(), seconds);
   char dgSecretCode[DIGITAL_GEPPETTO_SECRET_LENGTH];
   readDigitalGeppettoSecret(dgSecretCode);
   TOTP totp = TOTP(dgSecretCode);
- // TOTP totp = TOTP("JV4UYZLHN5CG633S");
  long code=totp. gen_code  (timestamp ) ; 
   return code;
 }
@@ -271,26 +270,24 @@ void testRTCMode(){
   rtc.read();
 //*************************Time********************************
   Serial.print("   Year = ");//year
-  Serial.print(rtc.year);
+  Serial.print(rtc.getYear());
   Serial.print("   Month = ");//month
-  Serial.print(rtc.month);
+  Serial.print(rtc.getMonth());
   Serial.print("   Day = ");//day
-  Serial.print(rtc.day);
-  Serial.print("   Week = ");//week
-  Serial.print(rtc.week);
+  Serial.print(rtc.getDay());
   Serial.print("   Hour = ");//hour
-  Serial.print(rtc.hour);
+  Serial.print(rtc.getHours());
   Serial.print("   Minute = ");//minute
-  Serial.print(rtc.minute);
+  Serial.print(rtc.getMinutes());
   Serial.print("   Second = ");//second
-  int seconds = rtc.second+SECONDOFFSET;
+  int seconds = rtc.getSeconds()+SECONDOFFSET;
   Serial.print(seconds);
   
 
 //
 int month = rtc.month-1;
 
-  long timestamp = dateAsSeconds(rtc.year, month, rtc.day, rtc.hour, rtc.minute, seconds);
+  long timestamp = dateAsSeconds(rtc.getYear(), month, rtc.getDay(), rtc.getHour(), rtc.getMinute(), seconds);
   Serial.print("date as seconds=");
   Serial.print(timestamp);
   long code = generateCode();
@@ -383,20 +380,15 @@ void setup() {
     leds.begin();  // Call this to start up the LED strip.
   clearLEDs();   // This function, defined below, turns all LEDs off...
   leds.show();
-  rtc.setup();
-
-  //Set the RTC time automatically: Calibrate RTC time by your computer time
-  //rtc.adjustRtc(F(__DATE__), F(__TIME__)); 
+  
 }
 
 void loop() {
 
- 
 
- rtc.read();
- int seconds = rtc.second+SECONDOFFSET;
- int month = rtc.month-1;
-  long now = dateAsSeconds(rtc.year, month, rtc.day, rtc.hour, rtc.minute, seconds);
+ int seconds = rtc.getSecond()+SECONDOFFSET;
+ int month = rtc.getMonth()-1;
+  long now = dateAsSeconds(rtc.getYear(), month, rtc.getDay(), rtc.getHour(), rtc.getMinute(), seconds);
   if( (now - commandCodeHistoryLastRefreshSeconds)>COMMAND_CODE_HISTORY_REFRESH_SECONDS){
       commandCodeHistoryLastRefreshSeconds=now;
       long currentCode = generateCode();
@@ -523,7 +515,7 @@ void loop() {
      leds.show();
     Serial.flush(); 
   //  lcd.clear();
-  }else if(command.startsWith("SetClockTime")){
+  }else if(command.startsWith("SetTime")){
     int year = getValue(command, '#', 1).toInt();
     int month = getValue(command, '#', 2).toInt(); // January=1
     int day = getValue(command, '#', 3).toInt();
@@ -532,7 +524,12 @@ void loop() {
     int hour = getValue(command, '#', 5).toInt();
     int minute = getValue(command, '#', 6).toInt();
     int second = getValue(command, '#', 7).toInt();
-    rtc.adjustRtc(year,month,day,dayOfWeek, hour, minute,second);
+    
+    rtc.stopRTC(); //stop the RTC
+    rtc.setTime(hour,minute,second); //set the time here
+    rtc.setDate(day,month,year); //set the date here
+    rtc.startRTC(); //start the RTC
+    
     Serial.println("Ok-Set Time");
     Serial.flush();
     
