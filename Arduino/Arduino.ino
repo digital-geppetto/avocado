@@ -515,6 +515,7 @@ void loop() {
     Serial.flush(); 
   //  lcd.clear();
   }else if(command.startsWith("SetTime")){
+    //SetTime#2019#6#24#13#50#45
     int year = getValue(command, '#', 1).toInt();
     int month = getValue(command, '#', 2).toInt(); // January=1
     int day = getValue(command, '#', 3).toInt();
@@ -701,7 +702,8 @@ void loop() {
       Serial.flush();
     }
   }else{
-    Serial.println("Bad Command");
+    Serial.print("Failure-Bad Command");
+    Serial.println(command);
     Serial.flush();
   }
  }else{
