@@ -514,7 +514,7 @@ void loop() {
      leds.show();
     Serial.flush(); 
   //  lcd.clear();
-  }else if(command.startsWith("GetTime"){
+  }else if(command.startsWith("GetTime")){
     String displayTime =  "";
   Serial.print(rtc.getDay());
   Serial.print("/");
