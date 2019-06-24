@@ -15,7 +15,7 @@
                "Maximum":20
             },
             {
-                "name":"Sample Frequency",
+                "Name":"Sample Frequency",
                 "Value":1.0,
                 "Value Type":"double",
                 "Minimum":1,
