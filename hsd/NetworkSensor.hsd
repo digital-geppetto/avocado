@@ -80,6 +80,23 @@
             "Panel Display Name":"Ping Time",
             "Range Maximum":1000,
             "Range Minimum":0
+        },
+        {
+            "Name":"SampleTimeMillis",
+            "Units":"millisec",
+            "Value Type":"long",
+            "Sensor Request Queue Position":7,
+            "Reporting Value Dene Name":"Network Status"
+        },
+        {
+            "Name":"SampleTimeString",
+            "Units":"",
+            "Value Type":"String",
+            "Sensor Request Queue Position":8,
+            "Reporting Value Dene Name":"Network Status",
+            "Human Interface Panel":"Network Status" ,
+            "Panel In Panel Position":8,
+            "Panel Display Name":"Sample Time"
         }
     ]
 
