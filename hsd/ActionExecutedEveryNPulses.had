@@ -1,5 +1,5 @@
 {
-    "Homeobox Definition Type":"ActionExecutedEveryNPulses.had",
+    "Homeobox Definition Type":"ActionExecutedEveryNPulses",
     "Homeobox Name":"Network Sensor Sample Control",
     "Action Group Name":"Network Sensor Sample Control",
     "Microcontroller Pointer":"@Egg:Internal:Components:Network Inspector MicroController",
