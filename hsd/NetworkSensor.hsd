@@ -3,6 +3,9 @@
     "Homeobox Name":"Network Sensor",
     "Sensor Name":"Network Sensor",
     "Microcontroller Pointer":"@Egg:Internal:Components:Network Inspector MicroController",
+    "Container Page Identity Pointer":"@Egg:Human Interface:Home Page",
+    "Reporting Value Dene Name":"Network Status",
+    "Human Interface Panel":"Network Status" ,
     "Provider":"https://www.digitalstables.com",
     "Port":"Internal",
     "Values":[
@@ -14,8 +17,7 @@
             "Range Maximum":255,
             "Range Minimum":0,
             "Initial Value":0,
-            "Reporting Value Dene Name":"Network Status",
-            "Human Interface Panel":"Network Status" ,
+
             "Panel In Panel Position":1,
             "Panel Display Name":"Number of Devices"
         },
@@ -38,8 +40,6 @@
             "Units":"",
             "Value Type":"JSONObject",
             "Sensor Request Queue Position":3,
-            "Reporting Value Dene Name":"Network Status",
-            "Human Interface Panel":"Network Status" ,
             "Panel In Panel Position":3,
             "Panel Display Name":"Device Changes",
             "Range Maximum":255,
@@ -50,8 +50,6 @@
             "Units":"kbytes/sec",
             "Value Type":"double",
             "Sensor Request Queue Position":4,
-            "Reporting Value Dene Name":"Network Status",
-            "Human Interface Panel":"Network Status" ,
             "Panel In Panel Position":4,
             "Panel Display Name":"Download Speed",
             "Range Maximum":1000000,
@@ -62,8 +60,6 @@
             "Units":"kbytes/sec",
             "Value Type":"double",
             "Sensor Request Queue Position":5,
-            "Reporting Value Dene Name":"Network Status",
-            "Human Interface Panel":"Network Status" ,
             "Panel In Panel Position":5,
             "Panel Display Name":"Upload Speed",
             "Range Maximum":1000000,
@@ -74,8 +70,6 @@
             "Units":"millisec",
             "Value Type":"double",
             "Sensor Request Queue Position":6,
-            "Reporting Value Dene Name":"Network Status",
-            "Human Interface Panel":"Network Status" ,
             "Panel In Panel Position":6,
             "Panel Display Name":"Ping Time",
             "Range Maximum":1000,
@@ -85,16 +79,13 @@
             "Name":"SampleTimeMillis",
             "Units":"millisec",
             "Value Type":"long",
-            "Sensor Request Queue Position":7,
-            "Reporting Value Dene Name":"Network Status"
+            "Sensor Request Queue Position":7
         },
         {
             "Name":"SampleTimeString",
             "Units":"",
             "Value Type":"String",
             "Sensor Request Queue Position":8,
-            "Reporting Value Dene Name":"Network Status",
-            "Human Interface Panel":"Network Status" ,
             "Panel In Panel Position":8,
             "Panel Display Name":"Sample Time"
         }
