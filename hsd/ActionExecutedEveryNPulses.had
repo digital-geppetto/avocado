@@ -1,0 +1,16 @@
+{
+    "Homeobox Definition Type":"ActionExecutedEveryNPulses.had",
+    "Homeobox Name":"Network Sensor Sample Control",
+    "Action Group Name":"Network Sensor Sample Control",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Network Inspector MicroController",
+    "Actuator Name": "Network Inspector Actuator",
+    "Actuator Action List Pointer":"@Egg:Internal:Actuators:Network Inspector Actuator",
+    "Counter Suffix":"Last Network Sensor Sample",
+   
+     "Execution Position":1,
+     "Action Name": "Generate Analysis",
+     "Actuator Command True Expression": "Generate Analysis",
+     "Condition Name" : "NetworkSensorCounterCondition",
+     "Counter Limit":5,
+     "Counter Increment":1                                   
+}
