@@ -13,7 +13,7 @@
             "ActionExecutedEveryNPulses.had"
         ],
        "Human Interface":[
-           
+        "NetworkSensorDeviceReport.hud"
        ],
        "Files":[]    
     }
