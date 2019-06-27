@@ -29,19 +29,13 @@
             "Sensor Request Queue Position":2,
             "Range Maximum":255,
             "Range Minimum":0,
-            "Initial Value":0,
-            "Reporting Value Dene Name":"Network Status",
-            "Human Interface Panel":"Network Status" ,
-            "Panel In Panel Position":2,
-            "Panel Display Name":"Device List"
+            "Initial Value":0
         },
         {
             "Name":"DeviceListChanges",
             "Units":"",
             "Value Type":"JSONObject",
             "Sensor Request Queue Position":3,
-            "Panel In Panel Position":3,
-            "Panel Display Name":"Device Changes",
             "Range Maximum":255,
             "Range Minimum":0
         },

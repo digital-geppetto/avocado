@@ -1,0 +1,21 @@
+{
+    "Homeobox Name":"Device Report",
+    "Homeobox Definition Type":"UserInterfaceDefinition",
+    "Container Page Identity":"@Egg:Human Interface:Home Page",
+    "Panels":[
+        {
+            "Panel Display Name":"Device List",
+            "Panel In Page Position":10,
+            "Panel Visualization Style": "NetworkSensorDeviceStatusReport",
+            "Processor":"SingleDeneDeneChainHumanInterfaceGenerator",
+            "Visible":true
+        },
+        {
+            "Panel Display Name":"Device List Changes",
+            "Panel In Page Position":11,
+            "Panel Visualization Style": "NetworkSensorDeviceListChangesReport",
+            "Processor":"SingleDeneDeneChainHumanInterfaceGenerator",
+            "Visible":true
+        }
+    ]
+}
