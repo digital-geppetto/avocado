@@ -47,7 +47,7 @@
             "Name":"DeviceListChanges",
             "Units":"",
             "Value Type":"JSONObject",
-            "Sensor Request Queue Position":3,
+            "Sensor Request Queue Position":4,
             "Range Maximum":255,
             "Range Minimum":0
         },
@@ -55,7 +55,7 @@
             "Name":"DownloadSpeed",
             "Units":"kbytes/sec",
             "Value Type":"double",
-            "Sensor Request Queue Position":4,
+            "Sensor Request Queue Position":5,
             "Panel In Panel Position":4,
             "Panel Display Name":"Download Speed",
             "Range Maximum":1000000,
@@ -65,7 +65,7 @@
             "Name":"UploadSpeed",
             "Units":"kbytes/sec",
             "Value Type":"double",
-            "Sensor Request Queue Position":5,
+            "Sensor Request Queue Position":6,
             "Panel In Panel Position":5,
             "Panel Display Name":"Upload Speed",
             "Range Maximum":1000000,
@@ -75,7 +75,7 @@
             "Name":"PingTime",
             "Units":"millisec",
             "Value Type":"double",
-            "Sensor Request Queue Position":6,
+            "Sensor Request Queue Position":7,
             "Panel In Panel Position":6,
             "Panel Display Name":"Ping Time",
             "Range Maximum":1000,
@@ -85,13 +85,13 @@
             "Name":"SampleTimeMillis",
             "Units":"millisec",
             "Value Type":"long",
-            "Sensor Request Queue Position":7
+            "Sensor Request Queue Position":8
         },
         {
             "Name":"SampleTimeString",
             "Units":"",
             "Value Type":"String",
-            "Sensor Request Queue Position":8
+            "Sensor Request Queue Position":9
         }
     ]
 
