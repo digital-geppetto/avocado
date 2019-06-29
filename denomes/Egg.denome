@@ -1241,6 +1241,12 @@
                                 "DeneWords": [
                                     {
                                         "Required": true,
+                                        "Value": true,
+                                        "Name": "Mother Microcontroller",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
                                         "Value": 1,
                                         "Value Type": "int",
                                         "Name": "Processing Queue Position"
