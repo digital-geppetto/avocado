@@ -1,11 +1,11 @@
 {
     "Homeobox Definition Type":"MutationBasedAction",
-    "Homeobox Name":"Add To White List",
-    "Mutation Name":"Add To White List",
+    "Homeobox Name":"Add To WhiteList",
+    "Mutation Name":"Add To WhiteList",
     "Microcontroller Pointer":"@Egg:Internal:Components:Network Inspector MicroController",
     "Actuator Name": "Network Inspector Actuator",
      "Evaluation Position":20,
-     "Action Name": "Add Device To WhiteList",
+     "Action Name": "Add Device To WhiteList Action",
      "Actuator Command Code True Expression": "AddDeviceToWhiteList#DeviceName#DeviceMacAddress",
      "Expression": "1==1"
 }

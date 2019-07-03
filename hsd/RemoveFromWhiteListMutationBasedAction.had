@@ -5,7 +5,7 @@
     "Microcontroller Pointer":"@Egg:Internal:Components:Network Inspector MicroController",
     "Actuator Name": "Network Inspector Actuator",
      "Evaluation Position":21,
-     "Action Name": "Remove Device From WhiteList",
+     "Action Name": "Remove Device From WhiteList Action",
      "Actuator Command Code True Expression": "RemoveDeviceFromWhiteList#DeviceName",
      "Expression": "1==1"
 }
