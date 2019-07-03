@@ -10,7 +10,9 @@
             "NetworkSensor.hsd"
         ],
        "Actuators":[
-            "ActionExecutedEveryNPulses.had"
+            "ActionExecutedEveryNPulses.had",
+            "RemoveFromWhiteListMutationBasedAction.had",
+            "AddToWhiteListMutationBasedAction.had"
         ],
        "Human Interface":[
         "NetworkSensorDeviceReport.hud"
