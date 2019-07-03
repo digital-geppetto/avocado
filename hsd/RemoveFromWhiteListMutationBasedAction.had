@@ -1,10 +1,10 @@
 {
     "Homeobox Definition Type":"MutationBasedAction",
     "Homeobox Name":"Remove From White List",
-    "Action Group Name":"Remove Device From White List",
+    "Nutation Name":"Remove Device From White List",
     "Microcontroller Pointer":"@Egg:Internal:Components:Network Inspector MicroController",
     "Actuator Name": "Network Inspector Actuator",
-     "Evaluation Position":20,
+     "Evaluation Position":21,
      "Action Name": "Remove Device From WhiteList",
      "Actuator Command Code True Expression": "RemoveDeviceFromWhiteList#DeviceName",
      "Expression": "1==1"
