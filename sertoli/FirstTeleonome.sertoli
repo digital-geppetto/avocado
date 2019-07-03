@@ -3,8 +3,7 @@
      "Containers":[],
     "HomeBoxDefinitions":{
         "Components":[
-            "NetworkInspectorMicroController.mcu",
-            "CSVPublisherMicroController.mcu"
+            "NetworkInspectorMicroController.mcu"
         ],
         "Sensors":[
             "NetworkSensor.hsd"

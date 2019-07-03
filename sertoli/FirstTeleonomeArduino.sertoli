@@ -4,7 +4,8 @@
     "HomeBoxDefinitions":{
         "Components":[
             "ArduinoMother.mcu",
-            "NetworkInspectorMicroController.mcu"
+            "NetworkInspectorMicroController.mcu",
+            "CSVPublisherMicroController.mcu"
         ],
         "Sensors":[
             "NetworkSensor.hsd"
