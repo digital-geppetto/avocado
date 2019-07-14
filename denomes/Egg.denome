@@ -829,6 +829,18 @@
                                         "Value": "success",
                                         "Name": "Operational Status Bootstrap Equivalent",
                                         "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": true,
+                                        "Name": "Persist Organism Pulse",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": true,
+                                        "Name": "Persist Pulse",
+                                        "Value Type": "boolean"
                                     }
                                 ],
                                 "Name": "Vital"
